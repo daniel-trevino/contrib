@@ -127,7 +127,7 @@ const Title = styled.h1`
 const Home: NextPage = () => {
   return (
     <Wrapper>
-      <SEO ogImageUrl="/thumbnail.jpeg" />
+      <SEO ogImageUrl="thumbnail.jpeg" />
       <Half>
         <Title>
           Contrib. <br />
@@ -179,7 +179,7 @@ const Home: NextPage = () => {
       </Half>
       <VideoWrapper>
         <Video
-          src="/sword.mp4"
+          src="sword.mp4"
           autoPlay
           loop
           muted

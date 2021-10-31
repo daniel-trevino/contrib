@@ -23,9 +23,9 @@ const SEO: React.FC<Props> = ({
         name="viewport"
         content="width=device-width, initial-scale=1, shrink-to-fit=no"
       />
-      <link rel="apple-touch-icon" sizes="180x180" href="/favicon.ico" />
-      <link rel="icon" type="image/png" sizes="32x32" href="/favicon.ico" />
-      <link rel="icon" type="image/png" sizes="16x16" href="/favicon.ico" />
+      <link rel="apple-touch-icon" sizes="180x180" href="favicon.ico" />
+      <link rel="icon" type="image/png" sizes="32x32" href="favicon.ico" />
+      <link rel="icon" type="image/png" sizes="16x16" href="favicon.ico" />
       {/* <link rel="manifest" href="/favicon/site.webmanifest" />
       <link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#000000" />
       <link rel="shortcut icon" href="/favicon/favicon.ico" /> */}
