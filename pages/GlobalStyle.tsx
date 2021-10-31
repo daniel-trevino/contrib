@@ -17,7 +17,7 @@ const GlobalStyle = createGlobalStyle`
     font-size: 16px;
     line-height: 2;
     color: #FFFFFF;
-    background: black;
+    background: rgb(2, 2, 2) 0%;
     font-weight: 400;
     -webkit-font-smoothing: antialiased;
   }
