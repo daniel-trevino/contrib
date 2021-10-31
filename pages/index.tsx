@@ -1,4 +1,3 @@
-import Head from "next/head"
 import type { NextPage } from "next"
 import styled from "styled-components"
 import SEO from "../components/SEO"
