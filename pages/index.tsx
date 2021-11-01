@@ -97,16 +97,20 @@ const List = styled.ul`
 
 const Title = styled.h1`
   font-size: 2.8rem;
-  background: linear-gradient(
-    to right,
-    rgb(255, 159, 225) 0%,
-    rgb(135, 39, 255) 100%
-  );
+  color: rgb(135, 39, 255);
 
-  background-clip: text;
-  text-fill-color: transparent;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  @supports (-webkit-background-clip: text) or (background-clip: text) {
+    background: linear-gradient(
+      to right,
+      rgb(255, 159, 225) 0%,
+      rgb(135, 39, 255) 100%
+    );
+
+    background-clip: text;
+    text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
 
   span {
     display: block;
