@@ -163,7 +163,7 @@ const Title = styled.h1`
 const Home: NextPage = () => {
   return (
     <Wrapper>
-      <SEO ogImageUrl='thumbnail.jpeg' />
+      <SEO ogImageUrl='/thumbnail.jpeg' />
       <Half>
         <Title>
           Contrib. <br />
