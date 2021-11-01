@@ -1,6 +1,6 @@
-import type { NextPage } from "next"
-import styled from "styled-components"
-import SEO from "../components/SEO"
+import type { NextPage } from 'next'
+import styled from 'styled-components'
+import SEO from '../components/SEO'
 
 const Wrapper = styled.div`
   display: flex;
@@ -25,6 +25,35 @@ const Half = styled.div`
 `
 
 const VideoWrapper = styled.div`
+  position: relative;
+  overflow: hidden;
+  &:before,
+  &:after {
+    content: '';
+    width: 100%;
+    height: 150px;
+    background: red;
+    position: absolute;
+    z-index: 3;
+  }
+
+  &:before {
+    top: 0;
+    background: linear-gradient(
+      0deg,
+      rgba(2, 2, 2, 0) 0%,
+      rgba(2, 2, 2, 1) 100%
+    );
+  }
+
+  &:after {
+    bottom: 0;
+    background: linear-gradient(
+      0deg,
+      rgba(2, 2, 2, 1) 100%,
+      rgba(2, 2, 2, 0) 0%
+    );
+  }
   @media (min-width: 768px) {
     flex: 1;
     position: relative;
@@ -63,31 +92,33 @@ const List = styled.ul`
   li {
     list-style: none;
     position: relative;
-    padding: 0.4rem 0;
+    padding: 0.3rem 0;
     font-size: 1.2rem;
     font-weight: 400;
-
-    span {
-      padding-right: 0.5rem;
-    }
+    /* border-bottom: 1px solid rgba(255, 255, 255, 0.15); */
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-right: 0.5rem;
+    margin-bottom: 20px;
 
     &:after {
       left: 0;
       top: 100%;
-      content: " ";
+      content: '';
       position: absolute;
-      width: 100%;
-      height: 4px;
+      width: 4px;
+      height: 100%;
+      top: 0;
       background: linear-gradient(
         to right,
         rgb(255, 159, 225) 0%,
         rgb(135, 39, 255) 100%
       );
     }
+  }
 
-    &:last-child:after {
-      display: none;
-    }
+  &:last-child {
+    margin: 0;
   }
 
   @media (min-width: 768px) {
@@ -97,20 +128,22 @@ const List = styled.ul`
 
 const Title = styled.h1`
   font-size: 2.8rem;
-  color: rgb(135, 39, 255);
+  background: linear-gradient(
+    to right,
+    rgb(255, 159, 225) 0%,
+    rgb(135, 39, 255) 100%
+  );
+  background: -webkit-linear-gradient(
+    to right,
+    rgb(255, 159, 225) 0%,
+    rgb(135, 39, 255) 100%
+  );
+  text-shadow: 0px 0px #00000000;
 
-  @supports (-webkit-background-clip: text) or (background-clip: text) {
-    background: linear-gradient(
-      to right,
-      rgb(255, 159, 225) 0%,
-      rgb(135, 39, 255) 100%
-    );
-
-    background-clip: text;
-    text-fill-color: transparent;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 
   span {
     display: block;
@@ -130,12 +163,12 @@ const Title = styled.h1`
 const Home: NextPage = () => {
   return (
     <Wrapper>
-      <SEO ogImageUrl="thumbnail.jpeg" />
+      <SEO ogImageUrl='thumbnail.jpeg' />
       <Half>
         <Title>
           Contrib. <br />
           <span>
-            DAO contribution and experience, validated <br /> on-chain
+            DAO contribution and experience, validated <br /> on-chain.
           </span>
         </Title>
         <Container>
@@ -143,36 +176,36 @@ const Home: NextPage = () => {
           <List>
             <li>
               <a
-                href="https://devpost.com/software/contribute-71auhd"
-                target="_blank"
-                rel="noreferrer"
+                href='https://devpost.com/software/contribute-71auhd'
+                target='_blank'
+                rel='noreferrer'
               >
                 <span>📰</span> DevPost
               </a>
             </li>
             <li>
               <a
-                href="https://twitter.com/ContribDAO"
-                target="_blank"
-                rel="noreferrer"
+                href='https://twitter.com/ContribDAO'
+                target='_blank'
+                rel='noreferrer'
               >
                 <span>🐦</span> ContribDAO Twitter
               </a>
             </li>
             <li>
               <a
-                href="https://twitter.com/jontgus/status/1452318726829772812"
-                target="_blank"
-                rel="noreferrer"
+                href='https://twitter.com/jontgus/status/1452318726829772812'
+                target='_blank'
+                rel='noreferrer'
               >
                 <span>🚌</span> How it started
               </a>
             </li>
             <li>
               <a
-                href="https://twitter.com/madladshad/status/1452339684441534468"
-                target="_blank"
-                rel="noreferrer"
+                href='https://twitter.com/madladshad/status/1452339684441534468'
+                target='_blank'
+                rel='noreferrer'
               >
                 <span>🤪</span> Probably nothing
               </a>
@@ -182,7 +215,7 @@ const Home: NextPage = () => {
       </Half>
       <VideoWrapper>
         <Video
-          src="sword.mp4"
+          src='sword.mp4'
           autoPlay
           loop
           muted
