@@ -1,15 +1,14 @@
-import Head from "next/head"
+import Head from "next/head";
 
-const DEFAULT_TITLE =
-  "Contrib. DAO contribution and experience, validated on-chain"
+const DEFAULT_TITLE = "Contrib.";
 const DEFAULT_DESCRIPTION =
-  "DAOs changed our lives. Brought passion, fun, and decentralization to us. But we’ve all been lurking around in too many discords, trying to make ourselves useful and start contributing. We talked with a bunch of DAOs and community members and we tried solving it! Looking at the impressive lineup of new DAO tools."
+  "DAO contribution and experience, validated on-chain.";
 
 type Props = {
-  title?: string
-  description?: string
-  ogImageUrl: string
-}
+  title?: string;
+  description?: string;
+  ogImageUrl: string;
+};
 
 const SEO: React.FC<Props> = ({
   title = DEFAULT_TITLE,
@@ -45,7 +44,7 @@ const SEO: React.FC<Props> = ({
       <meta property="og:description" content={description} />
       <meta property="og:site_name" content={title} />
     </Head>
-  )
-}
+  );
+};
 
-export default SEO
+export default SEO;
