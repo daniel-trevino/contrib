@@ -1,6 +1,6 @@
-import type { NextPage } from "next";
-import styled from "styled-components";
-import SEO from "../components/SEO";
+import type { NextPage } from 'next'
+import styled from 'styled-components'
+import SEO from '../components/SEO'
 
 const Wrapper = styled.div`
   display: flex;
@@ -17,19 +17,19 @@ const Wrapper = styled.div`
     max-width: 1100px;
     margin: 0 auto;
   }
-`;
+`
 
 const Half = styled.div`
   flex: 1;
   position: relative;
-`;
+`
 
 const VideoWrapper = styled.div`
   position: relative;
   overflow: hidden;
   &:before,
   &:after {
-    content: "";
+    content: '';
     width: 100%;
     height: 150px;
     background: red;
@@ -59,13 +59,13 @@ const VideoWrapper = styled.div`
     position: relative;
     min-height: 900px;
   }
-`;
+`
 
 const Emoji = styled.div`
   font-size: 8rem;
   margin-left: auto;
   margin-top: auto;
-`;
+`
 
 const Video = styled.video`
   width: 100%;
@@ -76,14 +76,14 @@ const Video = styled.video`
   @media (min-width: 768px) {
     position: absolute;
   }
-`;
+`
 
 const Container = styled.div`
   display: flex;
   flex-direction: row-reverse;
   justify-content: flex-end;
   margin-top: 2rem;
-`;
+`
 
 const List = styled.ul`
   margin: 0;
@@ -104,7 +104,7 @@ const List = styled.ul`
     &:after {
       left: 0;
       top: 100%;
-      content: "";
+      content: '';
       position: absolute;
       width: 4px;
       height: 100%;
@@ -124,7 +124,7 @@ const List = styled.ul`
   @media (min-width: 768px) {
     font-size: 1.5rem;
   }
-`;
+`
 
 const Title = styled.h1`
   font-size: 2.8rem;
@@ -158,12 +158,12 @@ const Title = styled.h1`
       font-size: 2rem;
     }
   }
-`;
+`
 
 const Home: NextPage = () => {
   return (
     <Wrapper>
-      <SEO ogImageUrl="/thumbnail.png" />
+      <SEO ogImageUrl='https://contrib.at/thumbnail.jpeg' />
       <Half>
         <Title>
           Contrib. <br />
@@ -176,36 +176,36 @@ const Home: NextPage = () => {
           <List>
             <li>
               <a
-                href="https://devpost.com/software/contribute-71auhd"
-                target="_blank"
-                rel="noreferrer"
+                href='https://devpost.com/software/contribute-71auhd'
+                target='_blank'
+                rel='noreferrer'
               >
                 <span>📰</span> DevPost
               </a>
             </li>
             <li>
               <a
-                href="https://twitter.com/ContribDAO"
-                target="_blank"
-                rel="noreferrer"
+                href='https://twitter.com/ContribDAO'
+                target='_blank'
+                rel='noreferrer'
               >
                 <span>🐦</span> ContribDAO Twitter
               </a>
             </li>
             <li>
               <a
-                href="https://twitter.com/jontgus/status/1452318726829772812"
-                target="_blank"
-                rel="noreferrer"
+                href='https://twitter.com/jontgus/status/1452318726829772812'
+                target='_blank'
+                rel='noreferrer'
               >
                 <span>🚌</span> How it started
               </a>
             </li>
             <li>
               <a
-                href="https://twitter.com/madladshad/status/1452339684441534468"
-                target="_blank"
-                rel="noreferrer"
+                href='https://twitter.com/madladshad/status/1452339684441534468'
+                target='_blank'
+                rel='noreferrer'
               >
                 <span>🤪</span> Probably nothing
               </a>
@@ -215,7 +215,7 @@ const Home: NextPage = () => {
       </Half>
       <VideoWrapper>
         <Video
-          src="sword.mp4"
+          src='sword.mp4'
           autoPlay
           loop
           muted
@@ -224,7 +224,7 @@ const Home: NextPage = () => {
         />
       </VideoWrapper>
     </Wrapper>
-  );
-};
+  )
+}
 
-export default Home;
+export default Home
